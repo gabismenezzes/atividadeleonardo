@@ -10,10 +10,14 @@
 
     <ItemGroup>
       <Compile Remove="Models\WebApplication\Usuário\Login.cshtml.cs" />
+      <Compile Remove="Views\LayoutInterno\_ViewIports.cshtml.cs" />
+      <Compile Remove="Views\LayoutInterno\LayoutInterno.cshtml.cs" />
     </ItemGroup>
 
     <ItemGroup>
       <Content Remove="Models\WebApplication\Usuário\Login.cshtml" />
+      <Content Remove="Views\LayoutInterno\_ViewIports.cshtml" />
+      <Content Remove="Views\LayoutInterno\LayoutInterno.cshtml" />
     </ItemGroup>
 
 </Project>
