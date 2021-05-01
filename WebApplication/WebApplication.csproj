@@ -6,18 +6,54 @@
 
     <ItemGroup>
       <None Remove="Views\Shared\LayoutInterno.html" />
+      <None Remove="Views\Ajuda\**" />
+      <None Remove="Views\LayoutInterno\**" />
     </ItemGroup>
 
     <ItemGroup>
       <Compile Remove="Models\WebApplication\Usuário\Login.cshtml.cs" />
       <Compile Remove="Views\LayoutInterno\_ViewIports.cshtml.cs" />
       <Compile Remove="Views\LayoutInterno\LayoutInterno.cshtml.cs" />
+      <Compile Remove="Views\Admin\Supervisao.cshtml.cs" />
+      <Compile Remove="Views\Acesso\Login.cs" />
+      <Compile Remove="Views\Acesso\Login1.cs" />
+      <Compile Remove="Models\WebApplication\Clientes.cs" />
+      <Compile Remove="Views\Ajuda\**" />
+      <Compile Remove="Views\Shared\_LayoutInterno.cshtml.cs" />
+      <Compile Remove="Views\LayoutInterno\**" />
+      <Compile Remove="Models\WebApplication\StatusConvidado.cs" />
+      <Compile Remove="Views\Shared\_DadosUsuario.cs" />
+      <Compile Remove="Models\WebApplication\Cliente\StatusCandidato.cs" />
     </ItemGroup>
 
     <ItemGroup>
       <Content Remove="Models\WebApplication\Usuário\Login.cshtml" />
       <Content Remove="Views\LayoutInterno\_ViewIports.cshtml" />
       <Content Remove="Views\LayoutInterno\LayoutInterno.cshtml" />
+      <Content Remove="Views\Ajuda\**" />
+      <Content Remove="Views\Shared\_LayoutInterno.cshtml" />
+      <Content Remove="Views\LayoutInterno\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Views\Ajuda\**" />
+      <EmbeddedResource Remove="Views\LayoutInterno\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\Ajuda\_LayoutExterno.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Ajuda\_LayoutInterno.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\LayoutInterno\Ajuda.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\LayoutInterno\LayoutInterno.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\LayoutInterno\_ViewImports.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\LayoutInterno\_ViewIports.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\LayoutInterno\_ViewStart.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="EntityFramework" Version="6.4.4" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0-preview.3.21201.2" />
+      <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="5.0.0-alpha.2" />
     </ItemGroup>
 
 </Project>
