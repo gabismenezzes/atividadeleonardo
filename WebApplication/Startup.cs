@@ -41,20 +41,20 @@ namespace WebApplication
                 options.Password.RequiredLength = 8;
             }).AddEntityFrameworkStores<DataBaseContext>();
 
-            services.ConfigureApplicationCookie(options =>
-            {
-                options.LoginPath = "/Acesso/Login";
-            });
-            
+            services.ConfigureApplicationCookie(options => { options.LoginPath = "/Acesso/Login"; });
+
             services.AddTransient<ClienteService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            if (env.IsDevelopment()) {
+            if (env.IsDevelopment())
+            {
                 app.UseDeveloperExceptionPage();
-            } else {
+            }
+            else
+            {
                 app.UseExceptionHandler("/Home/Error");
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
@@ -63,18 +63,21 @@ namespace WebApplication
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
-            
+
             app.UseRouting();
-            
+
             app.UseAuthentication();
             app.UseAuthorization();
-            
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Acesso}/{action=Login}/{param?}"
                 );
+                endpoints.MapControllerRoute(
+                    name: "admin", pattern: "Admin/{controller=Supervisao}/{action=Index}/{param?}");
             });
         }
     }
+}

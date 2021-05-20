@@ -6,13 +6,13 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace WebApplication.Controllers.Admin
 {
-    [Authorize]
+    
     public class AdminController : Controller
     {
         public AdminController()
         {
         }
-        
+        [Authorize]
         public IActionResult Supervisao()
         {
             return View();

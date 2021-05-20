@@ -24,6 +24,7 @@
       <Compile Remove="Models\WebApplication\StatusConvidado.cs" />
       <Compile Remove="Views\Shared\_DadosUsuario.cs" />
       <Compile Remove="Models\WebApplication\Cliente\StatusCandidato.cs" />
+      <Compile Remove="Models\WebApplication\Usuário\UsuarioService.cs" />
     </ItemGroup>
 
     <ItemGroup>

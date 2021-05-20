@@ -13,7 +13,7 @@ namespace WebApplication.Data
         public DbSet<ClienteEntity> Clientes { get; set; }
         public DbSet<EventoEntity> Eventos { get; set; }
 
-        public DataBaseContext(DbContextOptions<DataBaseContext> options)
+        public DataBaseContext(DbContextOptions<DBContext> options)
             : base(options)
         {
         }
